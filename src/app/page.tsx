@@ -200,23 +200,14 @@ export default function Home() {
               {/* Product Image */}
               <div className="flex justify-center">
                 <div className="relative">
-                  {/* Water bottles arrangement */}
-                  <div className="grid grid-cols-3 gap-2 max-w-sm">
-                    {[...Array(9)].map((_, i) => (
-                      <div key={i} className="relative">
-                        <div className="w-16 h-24 bg-gradient-to-b from-red-500 to-red-600 rounded-lg relative overflow-hidden">
-                          {/* Bottle cap */}
-                          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-red-600 rounded-b-lg"></div>
-                          {/* Label */}
-                          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-10 h-8 bg-white rounded text-xs flex items-center justify-center">
-                            <span className="text-red-600 font-bold text-xs">EVA</span>
-                          </div>
-                          {/* Water content */}
-                          <div className="absolute bottom-0 left-0 right-0 h-12 bg-blue-100 opacity-30 rounded-b-lg"></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <Image
+                    src="/water.png"
+                    alt="Pure Premium Water"
+                    width={400}
+                    height={300}
+                    className="w-full max-w-sm h-auto object-contain"
+                    priority
+                  />
                 </div>
               </div>
 

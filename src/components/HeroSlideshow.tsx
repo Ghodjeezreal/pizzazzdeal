@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import Image from "next/image";
 
 const slides = [
   {
@@ -11,7 +12,7 @@ const slides = [
     description: "Bringing the neighborhood market straight to your door. Fresh produce, local favorites, and fast delivery.",
     buttonText: "Start Now",
     bgGradient: "from-orange-400 to-red-500",
-    image: "👩🏾‍🍳",
+    image: "/chef.png",
     imageText: "Fresh Market Vendor"
   },
   {
@@ -21,7 +22,7 @@ const slides = [
     description: "Hand-picked products from local farms and trusted suppliers. Quality you can taste, freshness you can trust.",
     buttonText: "Shop Now",
     bgGradient: "from-green-400 to-blue-500",
-    image: "🌿",
+    image: "/market.png",
     imageText: "Farm Fresh Quality"
   },
   {
@@ -31,7 +32,7 @@ const slides = [
     description: "Same-day delivery to your doorstep. Never run out of essentials with our quick and reliable service.",
     buttonText: "Order Now",
     bgGradient: "from-[#89184E] to-pink-500",
-    image: "🚚",
+    image: "/chef.png",
     imageText: "Quick Delivery"
   }
 ];
@@ -88,14 +89,17 @@ export default function HeroSlideshow() {
             <div className="relative order-1 lg:order-2">
               <div className={`bg-gradient-to-br ${slide.bgGradient} rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl transform rotate-1 sm:rotate-3 transition-all duration-500`}>
                 <div className="bg-white rounded-2xl p-4 sm:p-6 transform -rotate-1 sm:-rotate-3">
-                  <div className="w-full h-48 sm:h-56 lg:h-64 bg-gray-200 rounded-xl mb-3 sm:mb-4 flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-orange-200 rounded-full mx-auto mb-2 flex items-center justify-center text-2xl sm:text-4xl">
-                        {slide.image}
-                      </div>
-                      <p className="text-xs sm:text-sm">{slide.imageText}</p>
-                    </div>
+                  <div className="w-full h-48 sm:h-56 lg:h-64 rounded-xl mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
+                    <Image
+                      src={slide.image}
+                      alt={slide.imageText}
+                      width={300}
+                      height={200}
+                      className="w-full h-full object-cover rounded-xl"
+                      priority={currentSlide === 0}
+                    />
                   </div>
+                  <p className="text-xs sm:text-sm text-center text-gray-600 font-medium">{slide.imageText}</p>
                 </div>
               </div>
             </div>
