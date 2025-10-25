@@ -45,6 +45,7 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="border-t border-gray-300 mt-6 pt-4 text-center">
           <p className="text-gray-500 text-xs sm:text-sm">&copy; 2025 Food Market. All Rights Reserved.</p>
+          <p className="text-gray-400 text-xs">Developed by <Link href="http://freddiesconcepts.com.ng" target="_blank" rel="noopener noreferrer" className="text-[#89184E] hover:text-[#6d1340] transition-colors">Freddies Concepts</Link></p>
         </div>
       </div>
     </footer>

@@ -32,7 +32,7 @@ const slides = [
     description: "Same-day delivery to your doorstep. Never run out of essentials with our quick and reliable service.",
     buttonText: "Order Now",
     bgGradient: "from-[#89184E] to-pink-500",
-    image: "/chef.png",
+    image: "/delivery.jpg",
     imageText: "Quick Delivery"
   }
 ];

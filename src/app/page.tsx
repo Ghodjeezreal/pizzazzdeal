@@ -95,7 +95,7 @@ export default function Home() {
                 name: "Fresh Eggs", 
                 price: "₦6,000", 
                 unit: "/ crate (30 pcs)", 
-                imageUrl: "/api/placeholder/300/200",
+                imageUrl: "/eggs.jpg",
                 bgColor: "bg-orange-50"
               },
               { 
